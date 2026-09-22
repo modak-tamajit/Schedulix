@@ -7,13 +7,13 @@ from matplotlib.figure import Figure
 
 from core.simulator import SimulationResult
 
-_BG_DEEP = "#0D1117"
-_BG_SURFACE = "#161B22"
-_BORDER = "#30363D"
-_TEXT_PRIMARY = "#F0F6FC"
-_TEXT_SECONDARY = "#8B949E"
-_BAR_WT = "#6366F1"   # Indigo for Average Waiting Time
-_BAR_TAT = "#10B981"  # Emerald for Average Turnaround Time
+_BG_DEEP        = "#121214"
+_BG_SURFACE     = "#17171A"
+_BORDER         = "#2C2D35"
+_TEXT_PRIMARY   = "#FFFFFF"
+_TEXT_SECONDARY = "#8A909D"
+_BAR_WT         = "#6366F1"   # Indigo for Average Waiting Time
+_BAR_TAT        = "#10B981"   # Emerald for Average Turnaround Time
 
 
 def draw_comparison_chart(parent, results: Mapping[str, SimulationResult]) -> FigureCanvasTkAgg:

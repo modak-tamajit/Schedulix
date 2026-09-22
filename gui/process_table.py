@@ -6,17 +6,17 @@ import tkinter.ttk as ttk
 
 HEADINGS = ("PID", "AT", "BT", "Priority")
 
-# ── Schedulix table palette ──────────────────────────────────────────
-_BG_DEEP      = "#0D1117"
-_BG_SURFACE   = "#161B22"
-_BG_CARD      = "#1C2333"
-_BORDER       = "#30363D"
-_ACCENT       = "#6366F1"
-_TEXT_PRIMARY  = "#F0F6FC"
-_TEXT_SECONDARY = "#8B949E"
-_ROW_EVEN     = "#161B22"
-_ROW_ODD      = "#1C2333"
-_ROW_SELECT   = "#6366F1"
+# ── Schedulix table palette (Neutral Dark Developer Theme) ───────────
+_BG_DEEP        = "#121214"
+_BG_SURFACE     = "#17171A"
+_BG_CARD        = "#1E1E22"
+_BORDER         = "#2C2D35"
+_ACCENT         = "#6366F1"
+_TEXT_PRIMARY   = "#FFFFFF"
+_TEXT_SECONDARY = "#8A909D"
+_ROW_EVEN       = "#17171A"
+_ROW_ODD        = "#1E1E22"
+_ROW_SELECT     = "#6366F1"
 
 
 def apply_table_theme(parent: tk.Widget) -> None:

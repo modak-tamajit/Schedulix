@@ -178,8 +178,7 @@ t:/Operating System/
 │   └── test_srtf.py            # Unit tests for preemption and remaining times
 ├── ACADEMIC_REPORT.md          # University coursework report with verified findings
 ├── README.md                   # Comprehensive project documentation
-├── main.py                     # Primary Python entry point (console accessible)
-├── main.pyw                    # Windows console-free launcher (pythonw.exe)
+├── main.py                     # Application entry point
 └── requirements.txt            # Project dependencies
 ```
 
@@ -203,18 +202,11 @@ pip install -r requirements.txt
 
 ## 8. Running the Application
 
-### Option A: Standard Launch (Development & Debugging)
-Run via standard Python to keep the terminal console available for logging and debugging:
+Launch the application using Python:
 ```bash
 python main.py
 ```
-
-### Option B: Clean Windows Launch (Console-Free)
-On Windows, double-click **`main.pyw`** or run:
-```bash
-pythonw main.pyw
-```
-This automatically invokes `pythonw.exe`, launching Schedulix cleanly as a native desktop window without a background terminal.
+*(On Windows, you can also run `pythonw main.py` if you prefer to launch the GUI window without a background terminal).*
 
 ---
 

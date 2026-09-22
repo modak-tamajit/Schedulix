@@ -3,13 +3,13 @@ from __future__ import annotations
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 
-# ── Schedulix Gantt chart palette ────────────────────────────────────
-_BG_DEEP       = "#0D1117"
-_BG_SURFACE    = "#161B22"
-_BORDER        = "#30363D"
-_TEXT_PRIMARY   = "#F0F6FC"
-_TEXT_SECONDARY = "#8B949E"
-_IDLE_COLOR    = "#30363D"
+# ── Schedulix Gantt chart palette (Neutral Dark Theme) ───────────────
+_BG_DEEP        = "#121214"
+_BG_SURFACE     = "#17171A"
+_BORDER         = "#2C2D35"
+_TEXT_PRIMARY   = "#FFFFFF"
+_TEXT_SECONDARY = "#8A909D"
+_IDLE_COLOR     = "#2A2A32"
 
 # Curated process colors — distinct, not oversaturated
 PROCESS_COLORS = [

@@ -7,9 +7,9 @@ from gui.process_table import apply_table_theme
 
 HEADINGS = ("PID", "AT", "BT", "Priority", "CT", "TAT", "WT", "RT")
 
-# Row colors reused from process_table
-_ROW_EVEN = "#161B22"
-_ROW_ODD  = "#1C2333"
+# Row colors matching neutral dark palette
+_ROW_EVEN = "#17171A"
+_ROW_ODD  = "#1E1E22"
 
 
 def create_results_table(parent: tk.Widget) -> ttk.Treeview:
