@@ -1,0 +1,25 @@
+# Python byte-code / caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Output archives / temp
+*.zip
+*.tar.gz
+outputs/
+work/
+
+# IDE / OS metadata
+.idea/
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
