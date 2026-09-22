@@ -16,12 +16,27 @@ class SimulationResult:
 
 
 def simulate(processes: list[Process], algorithm: str, quantum: int = 2, priority_preemptive: bool = False) -> SimulationResult:
-    if not processes: raise ValueError("Add at least one process before running simulation.")
+    """Runs a CPU scheduling simulation on an isolated copy of the provided processes."""
+    if not processes:
+        raise ValueError("Add at least one process before running simulation.")
+
+    # Guarantee isolated copy so caller workload is never modified
+    workload_copy = [p.copy_for_simulation() for p in processes]
+
     algorithms = {
-        "FCFS": lambda: schedule_fcfs(processes), "SJF": lambda: schedule_sjf(processes),
-        "SRTF": lambda: schedule_srtf(processes), "Round Robin": lambda: schedule_round_robin(processes, quantum),
-        "Priority": lambda: schedule_priority(processes, priority_preemptive),
+        "FCFS": lambda: schedule_fcfs(workload_copy),
+        "SJF": lambda: schedule_sjf(workload_copy),
+        "SRTF": lambda: schedule_srtf(workload_copy),
+        "Round Robin": lambda: schedule_round_robin(workload_copy, quantum),
+        "Priority": lambda: schedule_priority(workload_copy, priority_preemptive),
     }
-    if algorithm not in algorithms: raise ValueError("Choose a valid scheduling algorithm.")
+    if algorithm not in algorithms:
+        raise ValueError("Choose a valid scheduling algorithm.")
+
     simulated, segments = algorithms[algorithm]()
-    return SimulationResult(algorithm, sorted(simulated, key=lambda p: p.order), segments, calculate_metrics(simulated, segments))
+    return SimulationResult(
+        algorithm,
+        sorted(simulated, key=lambda p: p.order),
+        segments,
+        calculate_metrics(simulated, segments),
+    )
