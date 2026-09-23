@@ -14,7 +14,7 @@
 - **Course Title:** Operating Systems (Semester III)
 - **Academic Year:** 2026–27
 - **Institution:** Parul University, Faculty of IT & Computer Science (FITCS), Vadodara, Gujarat
-- **Faculty Guide / Supervisor:** `[Faculty Guide Name]` *(to be finalized upon institutional submission)*
+- **Faculty Guide / Supervisor:** Mrs. Priyanka Mod
 
 ---
 
